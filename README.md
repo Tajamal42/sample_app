@@ -3,6 +3,10 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
+This is the sample application for
+[*Ruby on Rails Tutorial: Learn Rails by Example*](http://railstutorial.org/)
+by [Tajamal Hussain](http://tajamalhussain.com/).
+
 Things you may want to cover:
 
 * Ruby version
