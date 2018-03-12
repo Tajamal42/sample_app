@@ -10,7 +10,7 @@
 #
 
 class User < ApplicationRecord
-
+	attr_accessor :password, :password_confirmation
 	before_save { |user| user.email = email.downcase }
 
 	validates :name,  presence: true, length: { maximum: 50 }
