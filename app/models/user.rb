@@ -22,6 +22,6 @@ class User < ApplicationRecord
 
 	private
 		def create_remember_token
-		self.remember_token = SecureRandom.urlsafe_base64
-	end
+			self.remember_token = SecureRandom.urlsafe_base64
+		end
 end
