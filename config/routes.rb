@@ -5,13 +5,12 @@ Rails.application.routes.draw do
 
   root to: 'static_pages#home'
   # these routes are for showing users a login form, logging them in, and logging them out.
-  get '/signin' => 'sessions#new'
-  post '/signin' => 'sessions#create'
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
 
   get '/signup', to: 'users#new'
   post '/users' => 'users#create'
-  get '/users', to: 'users#index'
   # get '/signin', to: 'sessions#new'
   get '/help', to: 'static_pages#help'
   get '/about', to: 'static_pages#about'
