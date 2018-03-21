@@ -7,7 +7,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
-gem 'bootstrap-sass'
+# gem 'bootstrap-sass'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
@@ -27,10 +27,20 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
-  gem 'bcrypt-ruby'
+# gem 'bcrypt-ruby'
+
+# require: false so bcrypt is loaded only when has_secure_password is used.
+# This is to avoid Active Model (and by extension the entire framework)
+# being dependent on a binary library.
+# gem 'bcrypt', '~> 3.1.11', require: false
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem 'jquery-rails'
+gem 'simple_form'
+gem 'rails-footnotes'
+gem 'bootstrap-sass'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -55,3 +65,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# gem 'bcrypt', platforms: :ruby
+

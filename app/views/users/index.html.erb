@@ -1,0 +1,15 @@
+<h1>Signed In Users</h1>
+<table>
+	<% @users.each do |i| %>
+	<tr>
+		<td><h2><%= i.id %></h2></td>
+		<td><h1><%= i.name %></h1></td>
+		<td><h2><%= i.email %></h2></td>
+	</tr>
+	<% end %>
+</table>
+<%= link_to "Log Out", session_path("current"), method: "delete" %> 
+
+    
+
+
