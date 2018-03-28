@@ -1,13 +1,13 @@
-<h1>Signed In Users</h1>
-<table>
-	<% @users.each do |i| %>
-	<tr>
-		<td><h2><%= i.id %></h2></td>
-		<td><h1><%= i.name %></h1></td>
-		<td><h2><%= i.email %></h2></td>
-	</tr>
-	<% end %>
-</table>
+<%= provide(:title, 'All users') %>
+<h1>All Users</h1>
+
+<%= will_paginate %>
+
+<ul class = "users">
+	<%= render @users %>	
+</ul>
+
+<%= will_paginate %>
 <%= link_to "Log Out", session_path("current"), method: "delete" %> 
 
     

@@ -152,6 +152,23 @@ aside {
 	margin-right: 10px;
 }
 
+/* users index */
+
+.users {
+	list-style: none;
+	margin: 0;
+}
+
+.users li {
+	overflow: auto;
+	padding: 10px 0;
+	border-top: 1px solid #000;
+}
+
+.users li:last-child {
+	border-bottom: 1px solid #000;
+}
+
 /* footer */
 
 footer {

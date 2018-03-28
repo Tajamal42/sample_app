@@ -7,8 +7,8 @@ class SessionsController < ApplicationController
 	def create
 		if user = User.authenticate(params[:session][:email], params[:session][:password])
         sign_in user
-        session[:user_id] = user.id
-        redirect_to user
+        #session[:user_id] = user.id
+        redirect_back_or user
         else
         	# If user's login doesn't work, send them back to the login form.
         	flash[:notice] = "Invalid Username or Password"
