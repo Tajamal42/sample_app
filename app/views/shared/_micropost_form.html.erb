@@ -1,0 +1,7 @@
+<%= simple_form_for @micropost do |f| %>
+	<%= render 'shared/error_messages', :object => @micropost %>
+	<div class = "field">
+		<%= f.text_area :content, placeholder: "Compose new micropost..." %>
+	</div>
+		<%= f.button:submit, wrapper_html: { class: 'btn btn-large btn-primary' } %>
+<% end %>

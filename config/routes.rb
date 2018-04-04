@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :users
   resources :sessions
+  resources :microposts, only: [:create, :destroy]
 
   root to: 'static_pages#home'
   # these routes are for showing users a login form, logging them in, and logging them out.

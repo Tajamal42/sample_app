@@ -11,6 +11,7 @@
 
 class User < ApplicationRecord
 	attr_accessor :password
+	has_many :microposts, dependent: :destroy
 
 	email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	validates :name, presence: true, length: { maximum: 50 }
@@ -37,6 +38,11 @@ class User < ApplicationRecord
 	    return nil if user.nil?
 	    return user if user.salt == cookie_salt
 	end  
+
+	def feed
+		# This is preliminary. See "Following users" for the full implementation.
+		Micropost.where("user_id = ?", id)
+	end
 
 	# Encrypting process for new user's password
     private
